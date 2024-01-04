@@ -11,6 +11,10 @@
 
     <modules>
         <module>Rpc-Hessian</module>
+        <module>thrift-common</module>
+        <module>rpc-thrift-idl</module>
+        <module>thrift-client</module>
+        <module>thrift-server</module>
     </modules>
 
     <properties>
