@@ -18,7 +18,19 @@ message HelloResponse{
     string result = 1;
 }
 
+message HelloRequestMultiValue{
+  repeated string name = 1;
+}
+
+message HelloResponseMultiValue{
+  string result = 1;
+}
+
 // 定义服务接口
 service HelloService{
   rpc hello(HelloRequest) returns (HelloResponse){}
+  rpc hello2(HelloRequestMultiValue) returns (HelloResponseMultiValue){}
+  rpc client2ServerStream(HelloRequest) returns(stream HelloResponse){}
+  rpc clientStream2Server(stream HelloRequest) returns(HelloResponse){}
+  rpc clientStream2ServerStream(stream HelloRequest) returns(stream HelloResponse){}
 }

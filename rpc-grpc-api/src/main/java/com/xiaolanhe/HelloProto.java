@@ -1112,6 +1112,1168 @@ public final class HelloProto {
 
   }
 
+  public interface HelloRequestMultiValueOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:HelloRequestMultiValue)
+      com.google.protobuf.MessageOrBuilder {
+
+    /**
+     * <code>repeated string name = 1;</code>
+     * @return A list containing the name.
+     */
+    java.util.List<java.lang.String>
+        getNameList();
+    /**
+     * <code>repeated string name = 1;</code>
+     * @return The count of name.
+     */
+    int getNameCount();
+    /**
+     * <code>repeated string name = 1;</code>
+     * @param index The index of the element to return.
+     * @return The name at the given index.
+     */
+    java.lang.String getName(int index);
+    /**
+     * <code>repeated string name = 1;</code>
+     * @param index The index of the value to return.
+     * @return The bytes of the name at the given index.
+     */
+    com.google.protobuf.ByteString
+        getNameBytes(int index);
+  }
+  /**
+   * Protobuf type {@code HelloRequestMultiValue}
+   */
+  public static final class HelloRequestMultiValue extends
+      com.google.protobuf.GeneratedMessageV3 implements
+      // @@protoc_insertion_point(message_implements:HelloRequestMultiValue)
+      HelloRequestMultiValueOrBuilder {
+  private static final long serialVersionUID = 0L;
+    // Use HelloRequestMultiValue.newBuilder() to construct.
+    private HelloRequestMultiValue(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+      super(builder);
+    }
+    private HelloRequestMultiValue() {
+      name_ = com.google.protobuf.LazyStringArrayList.EMPTY;
+    }
+
+    @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new HelloRequestMultiValue();
+    }
+
+    @java.lang.Override
+    public final com.google.protobuf.UnknownFieldSet
+    getUnknownFields() {
+      return this.unknownFields;
+    }
+    public static final com.google.protobuf.Descriptors.Descriptor
+        getDescriptor() {
+      return com.xiaolanhe.HelloProto.internal_static_HelloRequestMultiValue_descriptor;
+    }
+
+    @java.lang.Override
+    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+        internalGetFieldAccessorTable() {
+      return com.xiaolanhe.HelloProto.internal_static_HelloRequestMultiValue_fieldAccessorTable
+          .ensureFieldAccessorsInitialized(
+              com.xiaolanhe.HelloProto.HelloRequestMultiValue.class, com.xiaolanhe.HelloProto.HelloRequestMultiValue.Builder.class);
+    }
+
+    public static final int NAME_FIELD_NUMBER = 1;
+    private com.google.protobuf.LazyStringList name_;
+    /**
+     * <code>repeated string name = 1;</code>
+     * @return A list containing the name.
+     */
+    public com.google.protobuf.ProtocolStringList
+        getNameList() {
+      return name_;
+    }
+    /**
+     * <code>repeated string name = 1;</code>
+     * @return The count of name.
+     */
+    public int getNameCount() {
+      return name_.size();
+    }
+    /**
+     * <code>repeated string name = 1;</code>
+     * @param index The index of the element to return.
+     * @return The name at the given index.
+     */
+    public java.lang.String getName(int index) {
+      return name_.get(index);
+    }
+    /**
+     * <code>repeated string name = 1;</code>
+     * @param index The index of the value to return.
+     * @return The bytes of the name at the given index.
+     */
+    public com.google.protobuf.ByteString
+        getNameBytes(int index) {
+      return name_.getByteString(index);
+    }
+
+    private byte memoizedIsInitialized = -1;
+    @java.lang.Override
+    public final boolean isInitialized() {
+      byte isInitialized = memoizedIsInitialized;
+      if (isInitialized == 1) return true;
+      if (isInitialized == 0) return false;
+
+      memoizedIsInitialized = 1;
+      return true;
+    }
+
+    @java.lang.Override
+    public void writeTo(com.google.protobuf.CodedOutputStream output)
+                        throws java.io.IOException {
+      for (int i = 0; i < name_.size(); i++) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 1, name_.getRaw(i));
+      }
+      getUnknownFields().writeTo(output);
+    }
+
+    @java.lang.Override
+    public int getSerializedSize() {
+      int size = memoizedSize;
+      if (size != -1) return size;
+
+      size = 0;
+      {
+        int dataSize = 0;
+        for (int i = 0; i < name_.size(); i++) {
+          dataSize += computeStringSizeNoTag(name_.getRaw(i));
+        }
+        size += dataSize;
+        size += 1 * getNameList().size();
+      }
+      size += getUnknownFields().getSerializedSize();
+      memoizedSize = size;
+      return size;
+    }
+
+    @java.lang.Override
+    public boolean equals(final java.lang.Object obj) {
+      if (obj == this) {
+       return true;
+      }
+      if (!(obj instanceof com.xiaolanhe.HelloProto.HelloRequestMultiValue)) {
+        return super.equals(obj);
+      }
+      com.xiaolanhe.HelloProto.HelloRequestMultiValue other = (com.xiaolanhe.HelloProto.HelloRequestMultiValue) obj;
+
+      if (!getNameList()
+          .equals(other.getNameList())) return false;
+      if (!getUnknownFields().equals(other.getUnknownFields())) return false;
+      return true;
+    }
+
+    @java.lang.Override
+    public int hashCode() {
+      if (memoizedHashCode != 0) {
+        return memoizedHashCode;
+      }
+      int hash = 41;
+      hash = (19 * hash) + getDescriptor().hashCode();
+      if (getNameCount() > 0) {
+        hash = (37 * hash) + NAME_FIELD_NUMBER;
+        hash = (53 * hash) + getNameList().hashCode();
+      }
+      hash = (29 * hash) + getUnknownFields().hashCode();
+      memoizedHashCode = hash;
+      return hash;
+    }
+
+    public static com.xiaolanhe.HelloProto.HelloRequestMultiValue parseFrom(
+        java.nio.ByteBuffer data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.xiaolanhe.HelloProto.HelloRequestMultiValue parseFrom(
+        java.nio.ByteBuffer data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.xiaolanhe.HelloProto.HelloRequestMultiValue parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.xiaolanhe.HelloProto.HelloRequestMultiValue parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.xiaolanhe.HelloProto.HelloRequestMultiValue parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.xiaolanhe.HelloProto.HelloRequestMultiValue parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.xiaolanhe.HelloProto.HelloRequestMultiValue parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.xiaolanhe.HelloProto.HelloRequestMultiValue parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static com.xiaolanhe.HelloProto.HelloRequestMultiValue parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input);
+    }
+    public static com.xiaolanhe.HelloProto.HelloRequestMultiValue parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static com.xiaolanhe.HelloProto.HelloRequestMultiValue parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.xiaolanhe.HelloProto.HelloRequestMultiValue parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    @java.lang.Override
+    public Builder newBuilderForType() { return newBuilder(); }
+    public static Builder newBuilder() {
+      return DEFAULT_INSTANCE.toBuilder();
+    }
+    public static Builder newBuilder(com.xiaolanhe.HelloProto.HelloRequestMultiValue prototype) {
+      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
+    }
+    @java.lang.Override
+    public Builder toBuilder() {
+      return this == DEFAULT_INSTANCE
+          ? new Builder() : new Builder().mergeFrom(this);
+    }
+
+    @java.lang.Override
+    protected Builder newBuilderForType(
+        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+      Builder builder = new Builder(parent);
+      return builder;
+    }
+    /**
+     * Protobuf type {@code HelloRequestMultiValue}
+     */
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+        // @@protoc_insertion_point(builder_implements:HelloRequestMultiValue)
+        com.xiaolanhe.HelloProto.HelloRequestMultiValueOrBuilder {
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return com.xiaolanhe.HelloProto.internal_static_HelloRequestMultiValue_descriptor;
+      }
+
+      @java.lang.Override
+      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return com.xiaolanhe.HelloProto.internal_static_HelloRequestMultiValue_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                com.xiaolanhe.HelloProto.HelloRequestMultiValue.class, com.xiaolanhe.HelloProto.HelloRequestMultiValue.Builder.class);
+      }
+
+      // Construct using com.xiaolanhe.HelloProto.HelloRequestMultiValue.newBuilder()
+      private Builder() {
+
+      }
+
+      private Builder(
+          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+        super(parent);
+
+      }
+      @java.lang.Override
+      public Builder clear() {
+        super.clear();
+        name_ = com.google.protobuf.LazyStringArrayList.EMPTY;
+        bitField0_ = (bitField0_ & ~0x00000001);
+        return this;
+      }
+
+      @java.lang.Override
+      public com.google.protobuf.Descriptors.Descriptor
+          getDescriptorForType() {
+        return com.xiaolanhe.HelloProto.internal_static_HelloRequestMultiValue_descriptor;
+      }
+
+      @java.lang.Override
+      public com.xiaolanhe.HelloProto.HelloRequestMultiValue getDefaultInstanceForType() {
+        return com.xiaolanhe.HelloProto.HelloRequestMultiValue.getDefaultInstance();
+      }
+
+      @java.lang.Override
+      public com.xiaolanhe.HelloProto.HelloRequestMultiValue build() {
+        com.xiaolanhe.HelloProto.HelloRequestMultiValue result = buildPartial();
+        if (!result.isInitialized()) {
+          throw newUninitializedMessageException(result);
+        }
+        return result;
+      }
+
+      @java.lang.Override
+      public com.xiaolanhe.HelloProto.HelloRequestMultiValue buildPartial() {
+        com.xiaolanhe.HelloProto.HelloRequestMultiValue result = new com.xiaolanhe.HelloProto.HelloRequestMultiValue(this);
+        int from_bitField0_ = bitField0_;
+        if (((bitField0_ & 0x00000001) != 0)) {
+          name_ = name_.getUnmodifiableView();
+          bitField0_ = (bitField0_ & ~0x00000001);
+        }
+        result.name_ = name_;
+        onBuilt();
+        return result;
+      }
+
+      @java.lang.Override
+      public Builder clone() {
+        return super.clone();
+      }
+      @java.lang.Override
+      public Builder setField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.setField(field, value);
+      }
+      @java.lang.Override
+      public Builder clearField(
+          com.google.protobuf.Descriptors.FieldDescriptor field) {
+        return super.clearField(field);
+      }
+      @java.lang.Override
+      public Builder clearOneof(
+          com.google.protobuf.Descriptors.OneofDescriptor oneof) {
+        return super.clearOneof(oneof);
+      }
+      @java.lang.Override
+      public Builder setRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          int index, java.lang.Object value) {
+        return super.setRepeatedField(field, index, value);
+      }
+      @java.lang.Override
+      public Builder addRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.addRepeatedField(field, value);
+      }
+      @java.lang.Override
+      public Builder mergeFrom(com.google.protobuf.Message other) {
+        if (other instanceof com.xiaolanhe.HelloProto.HelloRequestMultiValue) {
+          return mergeFrom((com.xiaolanhe.HelloProto.HelloRequestMultiValue)other);
+        } else {
+          super.mergeFrom(other);
+          return this;
+        }
+      }
+
+      public Builder mergeFrom(com.xiaolanhe.HelloProto.HelloRequestMultiValue other) {
+        if (other == com.xiaolanhe.HelloProto.HelloRequestMultiValue.getDefaultInstance()) return this;
+        if (!other.name_.isEmpty()) {
+          if (name_.isEmpty()) {
+            name_ = other.name_;
+            bitField0_ = (bitField0_ & ~0x00000001);
+          } else {
+            ensureNameIsMutable();
+            name_.addAll(other.name_);
+          }
+          onChanged();
+        }
+        this.mergeUnknownFields(other.getUnknownFields());
+        onChanged();
+        return this;
+      }
+
+      @java.lang.Override
+      public final boolean isInitialized() {
+        return true;
+      }
+
+      @java.lang.Override
+      public Builder mergeFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        if (extensionRegistry == null) {
+          throw new java.lang.NullPointerException();
+        }
+        try {
+          boolean done = false;
+          while (!done) {
+            int tag = input.readTag();
+            switch (tag) {
+              case 0:
+                done = true;
+                break;
+              case 10: {
+                java.lang.String s = input.readStringRequireUtf8();
+                ensureNameIsMutable();
+                name_.add(s);
+                break;
+              } // case 10
+              default: {
+                if (!super.parseUnknownField(input, extensionRegistry, tag)) {
+                  done = true; // was an endgroup tag
+                }
+                break;
+              } // default:
+            } // switch (tag)
+          } // while (!done)
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.unwrapIOException();
+        } finally {
+          onChanged();
+        } // finally
+        return this;
+      }
+      private int bitField0_;
+
+      private com.google.protobuf.LazyStringList name_ = com.google.protobuf.LazyStringArrayList.EMPTY;
+      private void ensureNameIsMutable() {
+        if (!((bitField0_ & 0x00000001) != 0)) {
+          name_ = new com.google.protobuf.LazyStringArrayList(name_);
+          bitField0_ |= 0x00000001;
+         }
+      }
+      /**
+       * <code>repeated string name = 1;</code>
+       * @return A list containing the name.
+       */
+      public com.google.protobuf.ProtocolStringList
+          getNameList() {
+        return name_.getUnmodifiableView();
+      }
+      /**
+       * <code>repeated string name = 1;</code>
+       * @return The count of name.
+       */
+      public int getNameCount() {
+        return name_.size();
+      }
+      /**
+       * <code>repeated string name = 1;</code>
+       * @param index The index of the element to return.
+       * @return The name at the given index.
+       */
+      public java.lang.String getName(int index) {
+        return name_.get(index);
+      }
+      /**
+       * <code>repeated string name = 1;</code>
+       * @param index The index of the value to return.
+       * @return The bytes of the name at the given index.
+       */
+      public com.google.protobuf.ByteString
+          getNameBytes(int index) {
+        return name_.getByteString(index);
+      }
+      /**
+       * <code>repeated string name = 1;</code>
+       * @param index The index to set the value at.
+       * @param value The name to set.
+       * @return This builder for chaining.
+       */
+      public Builder setName(
+          int index, java.lang.String value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  ensureNameIsMutable();
+        name_.set(index, value);
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>repeated string name = 1;</code>
+       * @param value The name to add.
+       * @return This builder for chaining.
+       */
+      public Builder addName(
+          java.lang.String value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  ensureNameIsMutable();
+        name_.add(value);
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>repeated string name = 1;</code>
+       * @param values The name to add.
+       * @return This builder for chaining.
+       */
+      public Builder addAllName(
+          java.lang.Iterable<java.lang.String> values) {
+        ensureNameIsMutable();
+        com.google.protobuf.AbstractMessageLite.Builder.addAll(
+            values, name_);
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>repeated string name = 1;</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearName() {
+        name_ = com.google.protobuf.LazyStringArrayList.EMPTY;
+        bitField0_ = (bitField0_ & ~0x00000001);
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>repeated string name = 1;</code>
+       * @param value The bytes of the name to add.
+       * @return This builder for chaining.
+       */
+      public Builder addNameBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  checkByteStringIsUtf8(value);
+        ensureNameIsMutable();
+        name_.add(value);
+        onChanged();
+        return this;
+      }
+      @java.lang.Override
+      public final Builder setUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.setUnknownFields(unknownFields);
+      }
+
+      @java.lang.Override
+      public final Builder mergeUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.mergeUnknownFields(unknownFields);
+      }
+
+
+      // @@protoc_insertion_point(builder_scope:HelloRequestMultiValue)
+    }
+
+    // @@protoc_insertion_point(class_scope:HelloRequestMultiValue)
+    private static final com.xiaolanhe.HelloProto.HelloRequestMultiValue DEFAULT_INSTANCE;
+    static {
+      DEFAULT_INSTANCE = new com.xiaolanhe.HelloProto.HelloRequestMultiValue();
+    }
+
+    public static com.xiaolanhe.HelloProto.HelloRequestMultiValue getDefaultInstance() {
+      return DEFAULT_INSTANCE;
+    }
+
+    private static final com.google.protobuf.Parser<HelloRequestMultiValue>
+        PARSER = new com.google.protobuf.AbstractParser<HelloRequestMultiValue>() {
+      @java.lang.Override
+      public HelloRequestMultiValue parsePartialFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        Builder builder = newBuilder();
+        try {
+          builder.mergeFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.setUnfinishedMessage(builder.buildPartial());
+        } catch (com.google.protobuf.UninitializedMessageException e) {
+          throw e.asInvalidProtocolBufferException().setUnfinishedMessage(builder.buildPartial());
+        } catch (java.io.IOException e) {
+          throw new com.google.protobuf.InvalidProtocolBufferException(e)
+              .setUnfinishedMessage(builder.buildPartial());
+        }
+        return builder.buildPartial();
+      }
+    };
+
+    public static com.google.protobuf.Parser<HelloRequestMultiValue> parser() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.google.protobuf.Parser<HelloRequestMultiValue> getParserForType() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.xiaolanhe.HelloProto.HelloRequestMultiValue getDefaultInstanceForType() {
+      return DEFAULT_INSTANCE;
+    }
+
+  }
+
+  public interface HelloResponseMultiValueOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:HelloResponseMultiValue)
+      com.google.protobuf.MessageOrBuilder {
+
+    /**
+     * <code>string result = 1;</code>
+     * @return The result.
+     */
+    java.lang.String getResult();
+    /**
+     * <code>string result = 1;</code>
+     * @return The bytes for result.
+     */
+    com.google.protobuf.ByteString
+        getResultBytes();
+  }
+  /**
+   * Protobuf type {@code HelloResponseMultiValue}
+   */
+  public static final class HelloResponseMultiValue extends
+      com.google.protobuf.GeneratedMessageV3 implements
+      // @@protoc_insertion_point(message_implements:HelloResponseMultiValue)
+      HelloResponseMultiValueOrBuilder {
+  private static final long serialVersionUID = 0L;
+    // Use HelloResponseMultiValue.newBuilder() to construct.
+    private HelloResponseMultiValue(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+      super(builder);
+    }
+    private HelloResponseMultiValue() {
+      result_ = "";
+    }
+
+    @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new HelloResponseMultiValue();
+    }
+
+    @java.lang.Override
+    public final com.google.protobuf.UnknownFieldSet
+    getUnknownFields() {
+      return this.unknownFields;
+    }
+    public static final com.google.protobuf.Descriptors.Descriptor
+        getDescriptor() {
+      return com.xiaolanhe.HelloProto.internal_static_HelloResponseMultiValue_descriptor;
+    }
+
+    @java.lang.Override
+    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+        internalGetFieldAccessorTable() {
+      return com.xiaolanhe.HelloProto.internal_static_HelloResponseMultiValue_fieldAccessorTable
+          .ensureFieldAccessorsInitialized(
+              com.xiaolanhe.HelloProto.HelloResponseMultiValue.class, com.xiaolanhe.HelloProto.HelloResponseMultiValue.Builder.class);
+    }
+
+    public static final int RESULT_FIELD_NUMBER = 1;
+    private volatile java.lang.Object result_;
+    /**
+     * <code>string result = 1;</code>
+     * @return The result.
+     */
+    @java.lang.Override
+    public java.lang.String getResult() {
+      java.lang.Object ref = result_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        result_ = s;
+        return s;
+      }
+    }
+    /**
+     * <code>string result = 1;</code>
+     * @return The bytes for result.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getResultBytes() {
+      java.lang.Object ref = result_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        result_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    private byte memoizedIsInitialized = -1;
+    @java.lang.Override
+    public final boolean isInitialized() {
+      byte isInitialized = memoizedIsInitialized;
+      if (isInitialized == 1) return true;
+      if (isInitialized == 0) return false;
+
+      memoizedIsInitialized = 1;
+      return true;
+    }
+
+    @java.lang.Override
+    public void writeTo(com.google.protobuf.CodedOutputStream output)
+                        throws java.io.IOException {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(result_)) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 1, result_);
+      }
+      getUnknownFields().writeTo(output);
+    }
+
+    @java.lang.Override
+    public int getSerializedSize() {
+      int size = memoizedSize;
+      if (size != -1) return size;
+
+      size = 0;
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(result_)) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(1, result_);
+      }
+      size += getUnknownFields().getSerializedSize();
+      memoizedSize = size;
+      return size;
+    }
+
+    @java.lang.Override
+    public boolean equals(final java.lang.Object obj) {
+      if (obj == this) {
+       return true;
+      }
+      if (!(obj instanceof com.xiaolanhe.HelloProto.HelloResponseMultiValue)) {
+        return super.equals(obj);
+      }
+      com.xiaolanhe.HelloProto.HelloResponseMultiValue other = (com.xiaolanhe.HelloProto.HelloResponseMultiValue) obj;
+
+      if (!getResult()
+          .equals(other.getResult())) return false;
+      if (!getUnknownFields().equals(other.getUnknownFields())) return false;
+      return true;
+    }
+
+    @java.lang.Override
+    public int hashCode() {
+      if (memoizedHashCode != 0) {
+        return memoizedHashCode;
+      }
+      int hash = 41;
+      hash = (19 * hash) + getDescriptor().hashCode();
+      hash = (37 * hash) + RESULT_FIELD_NUMBER;
+      hash = (53 * hash) + getResult().hashCode();
+      hash = (29 * hash) + getUnknownFields().hashCode();
+      memoizedHashCode = hash;
+      return hash;
+    }
+
+    public static com.xiaolanhe.HelloProto.HelloResponseMultiValue parseFrom(
+        java.nio.ByteBuffer data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.xiaolanhe.HelloProto.HelloResponseMultiValue parseFrom(
+        java.nio.ByteBuffer data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.xiaolanhe.HelloProto.HelloResponseMultiValue parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.xiaolanhe.HelloProto.HelloResponseMultiValue parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.xiaolanhe.HelloProto.HelloResponseMultiValue parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.xiaolanhe.HelloProto.HelloResponseMultiValue parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.xiaolanhe.HelloProto.HelloResponseMultiValue parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.xiaolanhe.HelloProto.HelloResponseMultiValue parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static com.xiaolanhe.HelloProto.HelloResponseMultiValue parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input);
+    }
+    public static com.xiaolanhe.HelloProto.HelloResponseMultiValue parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static com.xiaolanhe.HelloProto.HelloResponseMultiValue parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.xiaolanhe.HelloProto.HelloResponseMultiValue parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    @java.lang.Override
+    public Builder newBuilderForType() { return newBuilder(); }
+    public static Builder newBuilder() {
+      return DEFAULT_INSTANCE.toBuilder();
+    }
+    public static Builder newBuilder(com.xiaolanhe.HelloProto.HelloResponseMultiValue prototype) {
+      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
+    }
+    @java.lang.Override
+    public Builder toBuilder() {
+      return this == DEFAULT_INSTANCE
+          ? new Builder() : new Builder().mergeFrom(this);
+    }
+
+    @java.lang.Override
+    protected Builder newBuilderForType(
+        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+      Builder builder = new Builder(parent);
+      return builder;
+    }
+    /**
+     * Protobuf type {@code HelloResponseMultiValue}
+     */
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+        // @@protoc_insertion_point(builder_implements:HelloResponseMultiValue)
+        com.xiaolanhe.HelloProto.HelloResponseMultiValueOrBuilder {
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return com.xiaolanhe.HelloProto.internal_static_HelloResponseMultiValue_descriptor;
+      }
+
+      @java.lang.Override
+      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return com.xiaolanhe.HelloProto.internal_static_HelloResponseMultiValue_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                com.xiaolanhe.HelloProto.HelloResponseMultiValue.class, com.xiaolanhe.HelloProto.HelloResponseMultiValue.Builder.class);
+      }
+
+      // Construct using com.xiaolanhe.HelloProto.HelloResponseMultiValue.newBuilder()
+      private Builder() {
+
+      }
+
+      private Builder(
+          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+        super(parent);
+
+      }
+      @java.lang.Override
+      public Builder clear() {
+        super.clear();
+        result_ = "";
+
+        return this;
+      }
+
+      @java.lang.Override
+      public com.google.protobuf.Descriptors.Descriptor
+          getDescriptorForType() {
+        return com.xiaolanhe.HelloProto.internal_static_HelloResponseMultiValue_descriptor;
+      }
+
+      @java.lang.Override
+      public com.xiaolanhe.HelloProto.HelloResponseMultiValue getDefaultInstanceForType() {
+        return com.xiaolanhe.HelloProto.HelloResponseMultiValue.getDefaultInstance();
+      }
+
+      @java.lang.Override
+      public com.xiaolanhe.HelloProto.HelloResponseMultiValue build() {
+        com.xiaolanhe.HelloProto.HelloResponseMultiValue result = buildPartial();
+        if (!result.isInitialized()) {
+          throw newUninitializedMessageException(result);
+        }
+        return result;
+      }
+
+      @java.lang.Override
+      public com.xiaolanhe.HelloProto.HelloResponseMultiValue buildPartial() {
+        com.xiaolanhe.HelloProto.HelloResponseMultiValue result = new com.xiaolanhe.HelloProto.HelloResponseMultiValue(this);
+        result.result_ = result_;
+        onBuilt();
+        return result;
+      }
+
+      @java.lang.Override
+      public Builder clone() {
+        return super.clone();
+      }
+      @java.lang.Override
+      public Builder setField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.setField(field, value);
+      }
+      @java.lang.Override
+      public Builder clearField(
+          com.google.protobuf.Descriptors.FieldDescriptor field) {
+        return super.clearField(field);
+      }
+      @java.lang.Override
+      public Builder clearOneof(
+          com.google.protobuf.Descriptors.OneofDescriptor oneof) {
+        return super.clearOneof(oneof);
+      }
+      @java.lang.Override
+      public Builder setRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          int index, java.lang.Object value) {
+        return super.setRepeatedField(field, index, value);
+      }
+      @java.lang.Override
+      public Builder addRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.addRepeatedField(field, value);
+      }
+      @java.lang.Override
+      public Builder mergeFrom(com.google.protobuf.Message other) {
+        if (other instanceof com.xiaolanhe.HelloProto.HelloResponseMultiValue) {
+          return mergeFrom((com.xiaolanhe.HelloProto.HelloResponseMultiValue)other);
+        } else {
+          super.mergeFrom(other);
+          return this;
+        }
+      }
+
+      public Builder mergeFrom(com.xiaolanhe.HelloProto.HelloResponseMultiValue other) {
+        if (other == com.xiaolanhe.HelloProto.HelloResponseMultiValue.getDefaultInstance()) return this;
+        if (!other.getResult().isEmpty()) {
+          result_ = other.result_;
+          onChanged();
+        }
+        this.mergeUnknownFields(other.getUnknownFields());
+        onChanged();
+        return this;
+      }
+
+      @java.lang.Override
+      public final boolean isInitialized() {
+        return true;
+      }
+
+      @java.lang.Override
+      public Builder mergeFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        if (extensionRegistry == null) {
+          throw new java.lang.NullPointerException();
+        }
+        try {
+          boolean done = false;
+          while (!done) {
+            int tag = input.readTag();
+            switch (tag) {
+              case 0:
+                done = true;
+                break;
+              case 10: {
+                result_ = input.readStringRequireUtf8();
+
+                break;
+              } // case 10
+              default: {
+                if (!super.parseUnknownField(input, extensionRegistry, tag)) {
+                  done = true; // was an endgroup tag
+                }
+                break;
+              } // default:
+            } // switch (tag)
+          } // while (!done)
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.unwrapIOException();
+        } finally {
+          onChanged();
+        } // finally
+        return this;
+      }
+
+      private java.lang.Object result_ = "";
+      /**
+       * <code>string result = 1;</code>
+       * @return The result.
+       */
+      public java.lang.String getResult() {
+        java.lang.Object ref = result_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          result_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <code>string result = 1;</code>
+       * @return The bytes for result.
+       */
+      public com.google.protobuf.ByteString
+          getResultBytes() {
+        java.lang.Object ref = result_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          result_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <code>string result = 1;</code>
+       * @param value The result to set.
+       * @return This builder for chaining.
+       */
+      public Builder setResult(
+          java.lang.String value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  
+        result_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string result = 1;</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearResult() {
+        
+        result_ = getDefaultInstance().getResult();
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string result = 1;</code>
+       * @param value The bytes for result to set.
+       * @return This builder for chaining.
+       */
+      public Builder setResultBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  checkByteStringIsUtf8(value);
+        
+        result_ = value;
+        onChanged();
+        return this;
+      }
+      @java.lang.Override
+      public final Builder setUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.setUnknownFields(unknownFields);
+      }
+
+      @java.lang.Override
+      public final Builder mergeUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.mergeUnknownFields(unknownFields);
+      }
+
+
+      // @@protoc_insertion_point(builder_scope:HelloResponseMultiValue)
+    }
+
+    // @@protoc_insertion_point(class_scope:HelloResponseMultiValue)
+    private static final com.xiaolanhe.HelloProto.HelloResponseMultiValue DEFAULT_INSTANCE;
+    static {
+      DEFAULT_INSTANCE = new com.xiaolanhe.HelloProto.HelloResponseMultiValue();
+    }
+
+    public static com.xiaolanhe.HelloProto.HelloResponseMultiValue getDefaultInstance() {
+      return DEFAULT_INSTANCE;
+    }
+
+    private static final com.google.protobuf.Parser<HelloResponseMultiValue>
+        PARSER = new com.google.protobuf.AbstractParser<HelloResponseMultiValue>() {
+      @java.lang.Override
+      public HelloResponseMultiValue parsePartialFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        Builder builder = newBuilder();
+        try {
+          builder.mergeFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.setUnfinishedMessage(builder.buildPartial());
+        } catch (com.google.protobuf.UninitializedMessageException e) {
+          throw e.asInvalidProtocolBufferException().setUnfinishedMessage(builder.buildPartial());
+        } catch (java.io.IOException e) {
+          throw new com.google.protobuf.InvalidProtocolBufferException(e)
+              .setUnfinishedMessage(builder.buildPartial());
+        }
+        return builder.buildPartial();
+      }
+    };
+
+    public static com.google.protobuf.Parser<HelloResponseMultiValue> parser() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.google.protobuf.Parser<HelloResponseMultiValue> getParserForType() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.xiaolanhe.HelloProto.HelloResponseMultiValue getDefaultInstanceForType() {
+      return DEFAULT_INSTANCE;
+    }
+
+  }
+
   private static final com.google.protobuf.Descriptors.Descriptor
     internal_static_HelloRequest_descriptor;
   private static final 
@@ -1122,6 +2284,16 @@ public final class HelloProto {
   private static final 
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
       internal_static_HelloResponse_fieldAccessorTable;
+  private static final com.google.protobuf.Descriptors.Descriptor
+    internal_static_HelloRequestMultiValue_descriptor;
+  private static final 
+    com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+      internal_static_HelloRequestMultiValue_fieldAccessorTable;
+  private static final com.google.protobuf.Descriptors.Descriptor
+    internal_static_HelloResponseMultiValue_descriptor;
+  private static final 
+    com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+      internal_static_HelloResponseMultiValue_fieldAccessorTable;
 
   public static com.google.protobuf.Descriptors.FileDescriptor
       getDescriptor() {
@@ -1132,10 +2304,18 @@ public final class HelloProto {
   static {
     java.lang.String[] descriptorData = {
       "\n\013Hello.proto\"\034\n\014HelloRequest\022\014\n\004name\030\001 " +
-      "\001(\t\"\037\n\rHelloResponse\022\016\n\006result\030\001 \001(\t28\n\014" +
-      "HelloService\022(\n\005hello\022\r.HelloRequest\032\016.H" +
-      "elloResponse\"\000B\035\n\rcom.xiaolanheB\nHelloPr" +
-      "otoP\000b\006proto3"
+      "\001(\t\"\037\n\rHelloResponse\022\016\n\006result\030\001 \001(\t\"&\n\026" +
+      "HelloRequestMultiValue\022\014\n\004name\030\001 \003(\t\")\n\027" +
+      "HelloResponseMultiValue\022\016\n\006result\030\001 \001(\t2" +
+      "\255\002\n\014HelloService\022(\n\005hello\022\r.HelloRequest" +
+      "\032\016.HelloResponse\"\000\022=\n\006hello2\022\027.HelloRequ" +
+      "estMultiValue\032\030.HelloResponseMultiValue\"" +
+      "\000\0228\n\023client2ServerStream\022\r.HelloRequest\032" +
+      "\016.HelloResponse\"\0000\001\0228\n\023clientStream2Serv" +
+      "er\022\r.HelloRequest\032\016.HelloResponse\"\000(\001\022@\n" +
+      "\031clientStream2ServerStream\022\r.HelloReques" +
+      "t\032\016.HelloResponse\"\000(\0010\001B\035\n\rcom.xiaolanhe" +
+      "B\nHelloProtoP\000b\006proto3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,
@@ -1152,6 +2332,18 @@ public final class HelloProto {
     internal_static_HelloResponse_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_HelloResponse_descriptor,
+        new java.lang.String[] { "Result", });
+    internal_static_HelloRequestMultiValue_descriptor =
+      getDescriptor().getMessageTypes().get(2);
+    internal_static_HelloRequestMultiValue_fieldAccessorTable = new
+      com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
+        internal_static_HelloRequestMultiValue_descriptor,
+        new java.lang.String[] { "Name", });
+    internal_static_HelloResponseMultiValue_descriptor =
+      getDescriptor().getMessageTypes().get(3);
+    internal_static_HelloResponseMultiValue_fieldAccessorTable = new
+      com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
+        internal_static_HelloResponseMultiValue_descriptor,
         new java.lang.String[] { "Result", });
   }
 
