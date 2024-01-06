@@ -16,6 +16,8 @@
         <module>thrift-client</module>
         <module>thrift-server</module>
         <module>rpc-grpc-api</module>
+        <module>rpc-grpc-service</module>
+        <module>rpc-grpc-client</module>
     </modules>
 
     <properties>
