@@ -1,6 +1,7 @@
 package com.xiaolanhe;
 
 import com.xiaolanhe.service.HelloServiceImpl;
+import com.xiaolanhe.service.TestServiceImpl;
 import io.grpc.Server;
 import io.grpc.ServerBuilder;
 
@@ -17,6 +18,7 @@ public class GprcServer1 {
 
         // 发布服务
         serverBuilder.addService(new HelloServiceImpl());
+        serverBuilder.addService(new TestServiceImpl());
 
         // 创建服务对象
         Server server = serverBuilder.build();
