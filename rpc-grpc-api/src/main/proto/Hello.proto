@@ -1,0 +1,24 @@
+syntax = "proto3";
+
+//后续protobuf生成的java代码 一个源文件还是多个源文件
+option java_multiple_files = false;
+option java_package = "com.xiaolanhe";
+option java_outer_classname = "HelloProto";
+
+
+/*
+    IDL文件 目的 发布RPC服务，service ----> message       message<------  hello xxxx
+ */
+
+message HelloRequest{
+  string name = 1;
+}
+
+message HelloResponse{
+    string result = 1;
+}
+
+// 定义服务接口
+service HelloService{
+  rpc hello(HelloRequest) returns (HelloResponse){}
+}
