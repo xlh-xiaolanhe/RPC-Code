@@ -18,6 +18,7 @@
         <module>rpc-grpc-api</module>
         <module>rpc-grpc-service</module>
         <module>rpc-grpc-client</module>
+        <module>rpc-grpc-springboot-server</module>
     </modules>
 
     <properties>

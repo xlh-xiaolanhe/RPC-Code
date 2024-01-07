@@ -1,0 +1,9 @@
+spring:
+  application:
+    name: boot-client
+
+grpc:
+  client:
+    grpc-server: #设置服务端的地址
+      address: "static://127.0.0.1:9000"
+      negotiation-type: plaintext  #等效于usePlaintext()
