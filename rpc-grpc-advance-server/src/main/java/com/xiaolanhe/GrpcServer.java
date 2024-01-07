@@ -2,6 +2,7 @@ package com.xiaolanhe;
 
 import com.xiaolanhe.interceptor.CustomServerInterceptor;
 import com.xiaolanhe.service.HelloServiceImpl;
+import com.xiaolanhe.streamTracer.CustomServerStreamFactory;
 import io.grpc.Server;
 import io.grpc.ServerBuilder;
 
@@ -15,7 +16,8 @@ public class GrpcServer {
     public static void main(String[] args) throws InterruptedException, IOException {
         ServerBuilder<?> serverBuilder = ServerBuilder.forPort(9000);
         serverBuilder.addService(new HelloServiceImpl());
-        serverBuilder.intercept(new CustomServerInterceptor());
+        //serverBuilder.intercept(new CustomServerInterceptor());
+        serverBuilder.addStreamTracerFactory(new CustomServerStreamFactory());
         Server server = serverBuilder.build();
 
         server.start();
