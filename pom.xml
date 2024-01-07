@@ -19,6 +19,10 @@
         <module>rpc-grpc-service</module>
         <module>rpc-grpc-client</module>
         <module>rpc-grpc-springboot-server</module>
+        <module>rpc-grpc-advance-common</module>
+        <module>rpc-grpc-advance-client</module>
+        <module>rpc-grpc-advance-client</module>
+        <module>rpc-grpc-advance-server</module>
     </modules>
 
     <properties>
