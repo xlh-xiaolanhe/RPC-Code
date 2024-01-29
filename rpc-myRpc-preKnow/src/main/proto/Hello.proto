@@ -1,0 +1,11 @@
+syntax = "proto3";
+
+package com.xiaolanhe;
+
+option java_multiple_files = false;
+option java_package = "com.xiaolanhe";
+option java_outer_classname = "HelloProto";
+
+message HelloRequest {
+    string name = 1;
+}

@@ -23,6 +23,7 @@
         <module>rpc-grpc-advance-client</module>
         <module>rpc-grpc-advance-client</module>
         <module>rpc-grpc-advance-server</module>
+        <module>rpc-myRpc-preKnow</module>
     </modules>
 
     <properties>
