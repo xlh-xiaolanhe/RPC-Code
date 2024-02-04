@@ -1,4 +1,4 @@
-package com.xiaolanhe.debut.CuratorStudy;/**
+package com.xiaolanhe.CuratorStudy;/**
  * @Package com.xiaolanhe.debut.CuratorStudy
  * @author xiaolanhe
  * @date 2024/2/2 23:39

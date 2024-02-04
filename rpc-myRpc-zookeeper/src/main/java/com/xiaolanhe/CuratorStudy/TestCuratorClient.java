@@ -1,4 +1,4 @@
-package com.xiaolanhe.debut.CuratorStudy;
+package com.xiaolanhe.CuratorStudy;
 
 import org.apache.curator.framework.CuratorFramework;
 import org.apache.curator.framework.CuratorFrameworkFactory;

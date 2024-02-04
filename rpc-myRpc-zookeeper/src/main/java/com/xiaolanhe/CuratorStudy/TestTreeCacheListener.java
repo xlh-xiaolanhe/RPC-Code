@@ -1,24 +1,26 @@
-package com.xiaolanhe.debut.CuratorStudy;
+package com.xiaolanhe.CuratorStudy;
 
 /**
  *@author: xiaolanhe
- *@createDate: 2024/2/2 23:30
+ *@createDate: 2024/2/2 23:43
  */
 
 import org.apache.curator.framework.CuratorFramework;
 import org.apache.curator.framework.CuratorFrameworkFactory;
-import org.apache.curator.framework.recipes.cache.ChildData;
 import org.apache.curator.framework.recipes.cache.CuratorCache;
 import org.apache.curator.framework.recipes.cache.CuratorCacheListener;
-import org.apache.curator.framework.recipes.cache.CuratorCacheListenerBuilder;
+import org.apache.curator.framework.recipes.cache.TreeCacheEvent;
+import org.apache.curator.framework.recipes.cache.TreeCacheListener;
 import org.apache.curator.retry.ExponentialBackoffRetry;
 
 import java.io.IOException;
 
 /**
-   下面这段代码，既可以监听节点数据变化，同时也可以获取节点新旧值
-*/
-public class TestNodeCacheListener2 {
+  监听子目录的变化 （包括父目录）TreeCacheListener
+
+   监听子路径 同时也可以监听 父路径,但是不能处理爷爷
+ */
+public class TestTreeCacheListener {
     public static void main(String[] args) throws IOException {
         ExponentialBackoffRetry backoffRetry = new ExponentialBackoffRetry(1000, 3, 3);
 
@@ -26,15 +28,11 @@ public class TestNodeCacheListener2 {
         CuratorFramework client = CuratorFrameworkFactory.newClient(connectString, 3000, 3000, backoffRetry);
         client.start();
 
-        CuratorCache curatorCache = CuratorCache.build(client, "/xiaojr");
-        CuratorCacheListener curatorCacheListener = CuratorCacheListener.builder().forChanges(new CuratorCacheListenerBuilder.ChangeListener() {
+        CuratorCache curatorCache = CuratorCache.build(client, "/z1/z2");
+        CuratorCacheListener curatorCacheListener = CuratorCacheListener.builder().forTreeCache(client, new TreeCacheListener() {
             @Override
-            public void event(ChildData oldValue, ChildData newValue) {
-                byte[] oldValueData = oldValue.getData();
-                byte[] newValueData = newValue.getData();
-
-                System.out.println("old value is : " + new String(oldValueData));
-                System.out.println("new value is : " + new String(newValueData));
+            public void childEvent(CuratorFramework client, TreeCacheEvent event) throws Exception {
+                System.out.println("---tree cache listener----");
             }
         }).build();
 
