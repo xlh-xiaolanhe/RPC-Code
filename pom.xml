@@ -25,6 +25,7 @@
         <module>rpc-grpc-advance-server</module>
         <module>rpc-myRpc-preKnow</module>
         <module>rpc-myRpc-zookeeper</module>
+        <module>rpc-myRpc-framework</module>
     </modules>
 
     <properties>

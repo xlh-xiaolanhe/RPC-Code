@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
+
+
+    <bean id="registry" class="com.xiaolanhe.registry.ZookeeperRegistry">
+        <constructor-arg>
+            <value>192.168.74.128:2181</value>
+        </constructor-arg>
+    </bean>
+
+    <bean id="transport" class="com.xiaolanhe.transport.NettyTransport"/>
+
+    <bean id="cluster" class="com.xiaolanhe.cluster.FailFastCluster"/>
+
+    <bean id="loadBalancer" class="com.xiaolanhe.loadbalance.RandomLoadBalancer"/>
+
+    <bean id="userService" class="com.xiaolanhe.proxy.ProxyFactoryBean">
+        <constructor-arg>
+            <value>com.xiaolanhe.service.UserService</value>
+        </constructor-arg>
+        <property name="transport" ref="transport"/>
+        <property name="registry" ref="registry"/>
+        <property name="loadBalancer" ref="loadBalancer"/>
+        <property name="cluster" ref="cluster"/>
+    </bean>
+
+
+</beans>
